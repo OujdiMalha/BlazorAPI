@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EOm4+BP6wOgkJh6H+BymVguuwcnCaDTidyBPyArB4UA=",
+  "Hash": "V3i+f+pMdql5V7qQMXb2bL0QgFdstkm+ZsqaPDSY3u4=",
   "Source": "BlazorAPI",
   "BasePath": "/",
   "Mode": "Root",
@@ -6900,6 +6900,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\github\\CSharp\\BlazorAPI\\bin\\Debug\\net7.0\\wwwroot\\_framework\\System.IO.MemoryMappedFiles.dll"
+    },
+    {
+      "Identity": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorAPI.styles.css",
+      "SourceId": "BlazorAPI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "/",
+      "RelativePath": "BlazorAPI.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorAPI.styles.css"
+    },
+    {
+      "Identity": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorAPI.bundle.scp.css",
+      "SourceId": "BlazorAPI",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "BasePath": "/",
+      "RelativePath": "BlazorAPI.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\github\\CSharp\\BlazorAPI\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorAPI.bundle.scp.css"
     },
     {
       "Identity": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\css\\app.css",
