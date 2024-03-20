@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 .container[b-hs2wz2gqnu] {
     margin-top: 50px;
     display: flex;
@@ -21,14 +22,14 @@
     width: 200px;
     height: 250px;
     padding: 10px;
-    background-color: yellow;
+    background-color: white;
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 10px rgba(0, 0, 0,0.15);
+    box-shadow: 0 10px rgba(0, 0, 0, 0.15);
 }
 
-img[b-hs2wz2gqnu]{
+img[b-hs2wz2gqnu] {
     width: 80%;
     height: 60%;
 }
@@ -39,7 +40,18 @@ img[b-hs2wz2gqnu]{
 }
 
 .pokemon-name[b-hs2wz2gqnu] {
-    text-transform : capitalize;
+    text-transform: capitalize;
     text-decoration: none;
     color: #000;
+}
+
+.type-badge[b-hs2wz2gqnu] {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 3px;
 }
