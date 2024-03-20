@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iIGrtAyvc/yt5kIlJ+C1ZvFPE4SFtcIr7/PteYVq2no=",
+  "Hash": "oaxcnYnwYVYAy8HY0p3xF5yEzYxWipzvrq6SKDpycEo=",
   "Source": "BlazorAPI",
   "BasePath": "/",
   "Mode": "Root",
@@ -6968,6 +6968,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\BlazorAPI.png"
+    },
+    {
+      "Identity": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\insignia.png",
+      "SourceId": "BlazorAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "img/insignia.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\insignia.png"
     },
     {
       "Identity": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\index.html",

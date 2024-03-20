@@ -197,6 +197,10 @@
       "PackagePath": "staticwebassets\\img\\BlazorAPI.png"
     },
     {
+      "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\insignia.png",
+      "PackagePath": "staticwebassets\\img\\insignia.png"
+    },
+    {
       "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
