@@ -1,0 +1,16 @@
+﻿@page "/pokemon"
+@using BlazorAPI.Models;
+@using BlazorAPI.Util
+@inject PokeClient client
+
+<h1>Pokemon Card</h1>
+
+@code {
+    Pokemon pokemon = new Pokemon();
+
+    protected async override Task OnInitializedAsync()
+    {
+        pokemon = await client.GetPokemon("1");
+    }
+
+}
