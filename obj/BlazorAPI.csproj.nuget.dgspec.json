@@ -40,6 +40,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Cake.LibMan": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -48,6 +52,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.3.3, )"
             }
           },
           "imports": [

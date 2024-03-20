@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "eDnrd4Kr+QF8GyB+ECygD6DXdu5LaBU2lP9XeP/JD//A7gGChS4aQgT6r4RCvbGFqMVIO4kjfz+s+NDKAMuWew==",
+  "dgSpecHash": "ou4C+W0DaHvyXALkN98iCr9aTpmKRKTyvsF1XYa2TMtHee/tBWxVpOrfRyh6Zio7nOPn6OR9FiO0CB8M7FZ9dA==",
   "success": true,
   "projectFilePath": "C:\\github\\CSharp\\BlazorAPI\\BlazorAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Malha\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
+    "C:\\Users\\Malha\\.nuget\\packages\\cake.libman\\1.0.1\\cake.libman.1.0.1.nupkg.sha512",
     "C:\\Users\\Malha\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.10\\microsoft.aspnetcore.authorization.7.0.10.nupkg.sha512",
     "C:\\Users\\Malha\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.10\\microsoft.aspnetcore.components.7.0.10.nupkg.sha512",
     "C:\\Users\\Malha\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.10\\microsoft.aspnetcore.components.analyzers.7.0.10.nupkg.sha512",

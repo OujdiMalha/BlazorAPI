@@ -1648,3 +1648,7 @@ C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\BlazorAPI.dll
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\refint\BlazorAPI.dll
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\BlazorAPI.pdb
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\ref\BlazorAPI.dll
+C:\github\CSharp\BlazorAPI\bin\Debug\net7.0\wwwroot\_framework\Cake.LibMan.dll
+C:\github\CSharp\BlazorAPI\bin\Debug\net7.0\wwwroot\_framework\Cake.LibMan.dll.gz
+C:\github\CSharp\BlazorAPI\bin\Debug\net7.0\Cake.LibMan.dll
+C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\build-gz\sxE3GBlU.gz
