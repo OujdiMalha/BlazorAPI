@@ -5,10 +5,13 @@
 
 <div class="container">
     <div class="card">
-        <div>
-            <img src="@pokemon.sprites.front_default" alt="pokemon sprite" />
+        @if (pokemon.types.Count > 0)
+        {
+            <div class="card-top" style="background-color: @PokeColor.GetTypeColor(pokemon.types[0].type.name)">
+                <img src="@pokemon.sprites.front_default" alt="pokemon sprite" class="card-img-top"/>
 
-        </div>
+            </div>
+        }
         <div class="inner-container">
             <div class="stats-head">
                 <div class="container">
@@ -20,7 +23,7 @@
                     <div>
                         @foreach (var type in pokemon.types)
                         {
-                            <span class="type-badge" style="background-color: @PokeColor.GetTypeColor(@type.type.name);"></span>
+                            <span class="type-badge" style="background-color: @PokeColor.GetTypeColor(@type.type.name);">@type.type.name</span>
                         }
                     </div>
                     <h5>Height: @pokemon.weight kg</h5>
@@ -29,7 +32,7 @@
 
             <div class="stats-head"> 
                 <div class="icon-container">
-                    <img src="/img/insignia.png" alt="star ball icon"/>
+                    <img src="/img/insignia.png" alt="star ball icon" style="width: 100px; height: 100px;"/>
                     <h2>Stats</h2>
                 </div>
                 @foreach (var stat in pokemon.stats)

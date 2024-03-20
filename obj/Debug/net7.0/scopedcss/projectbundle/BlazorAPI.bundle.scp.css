@@ -61,3 +61,86 @@ img[b-hs2wz2gqnu] {
     width: 400px;
     margin: 0 auto 20px auto;
 }
+/* /Pages/PokemonCard.razor.rz.scp.css */
+.pokemon-name[b-jlqci322h3]{
+    text-transform: capitalize;
+}
+
+img[b-jlqci322h3] {
+    witht: 200px
+}
+
+.badge[b-jlqci322h3] {
+    text-transform: capitalize;
+}
+
+.container[b-jlqci322h3] {
+    margin: 30px auto;
+    width: 28%;
+}
+
+.inner-container[b-jlqci322h3] {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.card-top[b-jlqci322h3] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.card[b-jlqci322h3] {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.pokemon-info[b-jlqci322h3] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.type-badge[b-jlqci322h3] {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 3px;
+}
+
+.stat[b-jlqci322h3] {
+    text-transform: capitalize;
+}
+
+.stat-bar[b-jlqci322h3] {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.poke-icon[b-jlqci322h3]{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.icon-container[b-jlqci322h3] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+    .icon-container img[b-jlqci322h3] {
+        display: inline-block; /* Permet de centrer l'image */
+    }

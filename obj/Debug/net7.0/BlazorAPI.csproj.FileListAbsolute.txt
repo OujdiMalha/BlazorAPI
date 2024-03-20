@@ -1654,3 +1654,4 @@ C:\github\CSharp\BlazorAPI\bin\Debug\net7.0\Cake.LibMan.dll
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\build-gz\sxE3GBlU.gz
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\scopedcss\Pages\Index.razor.rz.scp.css
 C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\scopedcss\projectbundle\BlazorAPI.bundle.scp.css
+C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\scopedcss\Pages\PokemonCard.razor.rz.scp.css
