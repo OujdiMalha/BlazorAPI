@@ -2,8 +2,13 @@
 @using Models;
 @using Util
 @inject PokeClient client
+@inject NavigationManager NavigationManager
+
+<!-- Ajoutez la référence à la bibliothèque d'icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <div class="body">
-   <div class="container">
+    <div class="container">
         <img src="/img/BlazorAPI.png" alt="app title" class="app-title" />
         <div class="pokemon-row">
             @foreach (var pokemon in pokemonList)
@@ -19,25 +24,66 @@
                                       style="background-color: @PokeColor.GetTypeColor(@type.type.name)">@type.type.name</span>
                             }
                         </div>
+                        <div class="action-buttons">
+                            <!-- Icône "Favorite" -->
+                            <i class="fas fa-star" @onclick:preventDefault @onclick="() => ToggleFavorite(pokemon)" style="color: @(pokemon.IsFavorite ? "red" : "white")"></i>
+                        
+                        
+                            <!-- Icône "Delete" -->
+                            <i class="fas fa-trash-alt" @onclick:preventDefault @onclick="() => DeletePokemon(pokemon)"></i>
+
+                            <!-- Icône "Edit" -->
+                            <i class="fas fa-edit" @onclick:preventDefault @onclick="() => EditPokemon(pokemon)"></i>
+                        </div>
                     </div>
                 </a>
-
             }
         </div>
     </div>
 </div>
+
 @code {
-    Pokemon pokemon = new Pokemon();
     List<Pokemon> pokemonList = new List<Pokemon>();
 
     protected override async Task OnInitializedAsync()
     {
-        for (int i = 1; i < 21; i++) // faut pas commencer la boucle par 0 parce que ca n'existe pas dans l'API
+        for (int i = 1; i < 21; i++)
         {
             pokemonList.Add(await client.GetPokemon(i.ToString()));
-            StateHasChanged();// pour actualisé l'etat
+            StateHasChanged();
         }
+    }
 
+    // Fonction pour mettre en favori un Pokémon
+    async Task ToggleFavorite(Pokemon pokemon)
+    {
+        pokemon.IsFavorite = !pokemon.IsFavorite; // Bascule l'état du favori
 
+        // Appel asynchrone à votre backend pour sauvegarder l'état du favori
+        await client.ToggleFavoritePokemon(pokemon.id, pokemon.IsFavorite);
+    }
+
+    // Fonction pour supprimer un Pokémon
+    async Task DeletePokemon(Pokemon pokemon)
+    {
+        pokemonList.Remove(pokemon); // Supprime le Pokémon de la liste
+
+        // Appel asynchrone à votre backend pour supprimer le Pokémon de votre base de données
+        await client.DeletePokemon(pokemon.id);
+    }
+
+    // Fonction pour modifier un Pokémon
+    void EditPokemon(Pokemon pokemon)
+    {
+        // Ici, vous pouvez ouvrir une boîte de dialogue de modification
+        // ou naviguer vers une page de modification avec les données du Pokémon
+
+        // Par exemple, vous pouvez stocker l'ID du Pokémon sélectionné pour la modification
+        int pokemonId = pokemon.id;
+
+        // Ensuite, vous pouvez naviguer vers une autre page pour la modification
+        // Notez que vous devrez créer cette page de modification dans votre application
+        // et transmettre l'ID du Pokémon à modifier comme paramètre
+        NavigationManager.NavigateTo($"/editpokemon/{pokemonId}");
     }
 }

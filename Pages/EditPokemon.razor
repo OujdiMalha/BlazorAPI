@@ -1,0 +1,53 @@
+﻿@page "/editpokemon/{pokemonId}"
+@inject PokeClient client
+@inject NavigationManager NavigationManager
+
+<h3>Edit Pokemon</h3>
+
+@if (pokemon != null)
+{
+    <form>
+        <div>
+            <label>Name:</label>
+            <input type="text" @bind="pokemon.name" />
+        </div>
+        <div>
+            <label>Types:</label>
+            @foreach (var type in pokemon.types)
+            {
+                <div>@type.type.name</div>
+            }
+        </div>
+        <div>
+            <label>Weight:</label>
+            <input type="number" @bind="pokemon.weight" />
+        </div>
+        <div>
+            <label>Height:</label>
+            <input type="number" @bind="pokemon.height" />
+        </div>
+        <button @onclick="SavePokemon">Save</button>
+    </form>
+}
+else
+{
+    <p>Loading...</p>
+}
+
+@code {
+    Pokemon pokemon;
+
+    [Parameter]
+    public string PokemonId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        pokemon = await client.GetPokemon(PokemonId);
+    }
+
+    async Task SavePokemon()
+    {
+        await client.UpdatePokemon(pokemon);
+        NavigationManager.NavigateTo("/");
+    }
+}

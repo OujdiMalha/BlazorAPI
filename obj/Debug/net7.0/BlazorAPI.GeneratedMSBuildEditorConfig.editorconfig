@@ -24,13 +24,17 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/github/CSharp/BlazorAPI/Pages/EditPokemon.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFBva2Vtb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/github/CSharp/BlazorAPI/Pages/FavoritePokemon.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmF2b3JpdGVQb2tlbW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/github/CSharp/BlazorAPI/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
-
-[C:/github/CSharp/BlazorAPI/Pages/Favorites.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmF2b3JpdGVzLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-hfz9tkllls
 
 [C:/github/CSharp/BlazorAPI/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=

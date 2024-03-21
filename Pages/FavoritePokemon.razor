@@ -1,0 +1,32 @@
+﻿@page "/favoritepokemon"
+@using Models;
+@using Util
+@inject PokeClient client
+
+<h3>Favorite Pokemon</h3>
+
+@if (favoritePokemonList != null && favoritePokemonList.Any())
+{
+    <div>
+        @foreach (var pokemon in favoritePokemonList)
+        {
+            <div>
+                <h4>@pokemon.name</h4>
+                <p>Type: @pokemon.types</p>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No favorite Pokémon found.</p>
+}
+
+@code {
+    List<Pokemon> favoritePokemonList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        favoritePokemonList = await client.GetFavoritePokemon();
+    }
+}
