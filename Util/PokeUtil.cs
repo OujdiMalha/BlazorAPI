@@ -2,22 +2,22 @@
 {
     public static class PokeUtil
     {
-        public const string pokeball = "icons8-pokeball-48";
+        public const string Pokeball = "icons8-pokeball-96.png";
 
-        public const string Greatball = "icons8-pokeball-48";
+        public const string Greatball = "icons8-superball-96.png";
 
-        public const string Ultraball = "icons8-pokeball-48";
+        public const string Ultraball = "icons8-ultra-ball-96.png";
 
-        public const string MasterBall = "icons8-pokeball-48";
+        public const string MasterBall = "icons8-mega-ball-96.png";
 
         public static string GetRandomBall()
         {
-            var pokeballArray = new String[] {pokeball, Greatball, Ultraball, MasterBall};
+            var pokeballArray = new String[] {Pokeball, Greatball, Ultraball, MasterBall};
 
             var rand = new Random();
-            string randamball = pokeballArray[rand.Next(pokeballArray.Length)];
+            string randomball = pokeballArray[rand.Next(pokeballArray.Length)];
 
-            return randamball;
+            return randomball;
         }
 
         public static double GetPokemonHeightInMeters(int height)

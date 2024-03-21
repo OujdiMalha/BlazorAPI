@@ -67,7 +67,7 @@ img[b-hs2wz2gqnu] {
 }
 
 img[b-jlqci322h3] {
-    witht: 200px
+    width: 200px
 }
 
 .badge[b-jlqci322h3] {
@@ -92,7 +92,7 @@ img[b-jlqci322h3] {
     flex-direction: column;
     align-items: center;
     text-align:center;
-    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .card[b-jlqci322h3] {
@@ -111,7 +111,7 @@ img[b-jlqci322h3] {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 13px;
     color: #fff;
     text-transform: uppercase;
@@ -139,8 +139,6 @@ img[b-jlqci322h3] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    width: 75px;
 }
-    .icon-container img[b-jlqci322h3] {
-        display: inline-block; /* Permet de centrer l'image */
-    }
+

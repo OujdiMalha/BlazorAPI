@@ -197,6 +197,22 @@
       "PackagePath": "staticwebassets\\img\\BlazorAPI.png"
     },
     {
+      "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\icons8-mega-ball-96.png",
+      "PackagePath": "staticwebassets\\img\\icons8-mega-ball-96.png"
+    },
+    {
+      "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\icons8-pokeball-96.png",
+      "PackagePath": "staticwebassets\\img\\icons8-pokeball-96.png"
+    },
+    {
+      "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\icons8-superball-96.png",
+      "PackagePath": "staticwebassets\\img\\icons8-superball-96.png"
+    },
+    {
+      "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\icons8-ultra-ball-96.png",
+      "PackagePath": "staticwebassets\\img\\icons8-ultra-ball-96.png"
+    },
+    {
       "Id": "C:\\github\\CSharp\\BlazorAPI\\wwwroot\\img\\insignia.png",
       "PackagePath": "staticwebassets\\img\\insignia.png"
     },
