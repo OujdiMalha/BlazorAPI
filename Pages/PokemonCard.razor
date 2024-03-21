@@ -4,6 +4,7 @@
 @inject PokeClient client
 @inject IJSRuntime JSRuntime
 
+
 <button class="pokemon-button" @onclick="GoToHomePage">Go to Home Page</button>
 <div class="container">
     <div class="card">
@@ -36,7 +37,7 @@
 
             <div class="stats-head">
                 <div class="icon-container">
-                    <img src="/img/insignia.png" alt="star ball icon" class="poke-icon" />
+                    <img src="/img/insignia.png" alt="star ball icon" class="poke-icon">
                     <h2>Stats</h2>
                 </div>
                 @if (pokemon != null && pokemon.stats != null)

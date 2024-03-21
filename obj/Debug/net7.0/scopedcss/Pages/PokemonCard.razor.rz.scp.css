@@ -65,10 +65,12 @@ img[b-jlqci322h3] {
     margin-bottom: 5px;
 }
 
-.poke-icon[b-jlqci322h3]{
+.poke-icon[b-jlqci322h3] {
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .icon-container[b-jlqci322h3] {
@@ -76,6 +78,7 @@ img[b-jlqci322h3] {
     align-items: center;
     justify-content: center;
     width: 75px;
+    margin-right: 15px;
 }
 
 .pokemon-button[b-jlqci322h3] {
@@ -84,6 +87,7 @@ img[b-jlqci322h3] {
     border: 2px solid #000; /* Bordure noire */
     border-radius: 20px; /* Coins arrondis */
     padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    align-items: center;
     font-size: 16px; /* Taille de police */
     font-weight: bold; /* Gras */
     text-transform: uppercase; /* Majuscules */

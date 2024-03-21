@@ -2,8 +2,13 @@
     box-sizing: border-box;
 }
 
+.body {
+    background-color: #000;
+}
+
 
 .container {
+    background-color: #ffcb05;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -22,7 +27,7 @@
     width: 200px;
     height: 250px;
     padding: 10px;
-    background-color: white;
+    background-color: black;
     align-items: center;
     text-align: center;
     border-radius: 10px;
@@ -42,7 +47,7 @@ img {
 .pokemon-name {
     text-transform: capitalize;
     text-decoration: none;
-    color: #000;
+    color: white;
 }
 
 .type-badge {
