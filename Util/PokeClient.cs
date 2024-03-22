@@ -63,7 +63,7 @@ namespace BlazorAPI.Util
             var data = new StringContent(JsonSerializer.Serialize(pokemon), Encoding.UTF8, "application/json");
 
             // Envoi d'une requête PUT pour mettre à jour le Pokemon
-            var response = await _httpClient.PutAsync($"https://pokeapi.co/api/v2/pokemon/{pokemon.id}", data);
+            var response = await _httpClient.PutAsync($"https://pokeapi.co/api/v2/pokemon/{pokemon.Id}", data);
             response.EnsureSuccessStatusCode();
         }
 

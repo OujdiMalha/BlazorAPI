@@ -16,7 +16,7 @@
         <div class="pokemon-row">
             @foreach (var pokemon in pokemonList)
             {
-                <a href="/pokemon/@pokemon.id">
+                <a href="/pokemon/@pokemon.Id">
                     <div class="pokemon-card">
                         <img src="@pokemon.sprites.front_default" alt="Pokemon Sprite">
                         <h4 class="pokemon-name">@pokemon.name</h4>
@@ -68,13 +68,13 @@
         if (pokemon.IsFavorite)
         {
             // Ajoute l'ID du Pokémon à la liste des favoris s'il n'est pas déjà présent
-            if (!favoritePokemonIds.Contains(pokemon.id))
-                favoritePokemonIds.Add(pokemon.id);
+            if (!favoritePokemonIds.Contains(pokemon.Id))
+                favoritePokemonIds.Add(pokemon.Id);
         }
         else
         {
             // Retire l'ID du Pokémon de la liste des favoris s'il est présent
-            favoritePokemonIds.Remove(pokemon.id);
+            favoritePokemonIds.Remove(pokemon.Id);
         }
 
         // Convertit la liste d'IDs de favoris en format JSON et la sauvegarde dans le stockage local
@@ -95,7 +95,7 @@
         pokemonList.Remove(pokemon); // Supprime le Pokémon de la liste
 
         // Appel asynchrone à votre backend pour supprimer le Pokémon de votre base de données
-        await client.DeletePokemon(pokemon.id);
+        await client.DeletePokemon(pokemon.Id);
     }
 
     // Fonction pour modifier un Pokémon
@@ -105,7 +105,7 @@
         // ou naviguer vers une page de modification avec les données du Pokémon
 
         // Par exemple, vous pouvez stocker l'ID du Pokémon sélectionné pour la modification
-        int pokemonId = pokemon.id;
+        int pokemonId = pokemon.Id;
 
         // Ensuite, vous pouvez naviguer vers une autre page pour la modification
         // Notez que vous devrez créer cette page de modification dans votre application

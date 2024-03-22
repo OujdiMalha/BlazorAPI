@@ -4,7 +4,7 @@ namespace BlazorAPI.Models
 {
     public class Pokemon
     {
-        public int id { get; set; } = 0;
+        public int Id { get; set; } = 0;
         public string name { get; set; } = "";
         public int weight { get; set; } = 0;
         public int height { get; set; } = 0;

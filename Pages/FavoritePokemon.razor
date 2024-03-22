@@ -57,9 +57,9 @@ else
         favoritePokemonList = new List<Pokemon>();
 
         // Obtient les détails des Pokémon favoris
-        foreach (var id in favoritePokemonIds)
+        foreach (var Id in favoritePokemonIds)
         {
-            var pokemon = await client.GetPokemon(id.ToString());
+            var pokemon = await client.GetPokemon(Id.ToString());
             favoritePokemonList.Add(pokemon);
         }
     }
@@ -75,6 +75,6 @@ else
 
     async Task UpdateFavoritesInLocalStorage()
     {
-        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "favorites", JsonSerializer.Serialize(favoritePokemonList.Select(p => p.id)));
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "favorites", JsonSerializer.Serialize(favoritePokemonList.Select(p => p.Id)));
     }
 }
