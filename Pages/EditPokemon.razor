@@ -13,9 +13,11 @@
         </div>
         <div>
             <label>Types:</label>
-            @foreach (var type in pokemon.types)
+            @for (int i = 0; i < pokemon.types.Count; i++)
             {
-                <div>@type.type.name</div>
+                <div>
+                    <input type="text" @bind="pokemon.types[i].type.name" />
+                </div>
             }
         </div>
         <div>
@@ -47,7 +49,18 @@ else
 
     async Task SavePokemon()
     {
-        await client.UpdatePokemon(pokemon);
-        NavigationManager.NavigateTo("/");
+        try
+        {
+            // Mettre à jour le Pokemon en utilisant le client PokeClient
+            await client.UpdatePokemon(pokemon);
+
+            // Rediriger vers la page d'accueil après la sauvegarde réussie
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception ex)
+        {
+            // Gérer les erreurs en cas d'échec de la mise à jour
+            Console.WriteLine("Error saving Pokemon: " + ex.Message);
+        }
     }
 }

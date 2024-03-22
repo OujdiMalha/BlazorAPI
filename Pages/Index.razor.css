@@ -69,3 +69,22 @@ img {
 a {
     text-decoration: none;
 }
+
+.pokemon-button {
+    background-color: red; /* Jaune Pikachu */
+    color: #333; /* Noir */
+    border: 2px solid #000; /* Bordure noire */
+    border-radius: 20px; /* Coins arrondis */
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    align-items: center;
+    font-size: 16px; /* Taille de police */
+    font-weight: bold; /* Gras */
+    text-transform: uppercase; /* Majuscules */
+    cursor: pointer; /* Curseur de souris pointer */
+    transition: background-color 0.3s, color 0.3s; /* Transition de couleur au survol */
+}
+
+    .pokemon-button:hover {
+        background-color: #f9d303; /* Jaune Pikachu légèrement plus clair au survol */
+        color: #222; /* Couleur du texte légèrement plus foncée au survol */
+    }

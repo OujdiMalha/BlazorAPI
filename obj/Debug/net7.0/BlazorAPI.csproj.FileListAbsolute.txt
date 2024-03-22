@@ -2487,3 +2487,4 @@ C:\Users\Malha\Downloads\BlazorAPI-main\BlazorAPI-main\obj\Debug\net7.0\BlazorAP
 C:\Users\Malha\Downloads\BlazorAPI-main\BlazorAPI-main\obj\Debug\net7.0\refint\BlazorAPI.dll
 C:\Users\Malha\Downloads\BlazorAPI-main\BlazorAPI-main\obj\Debug\net7.0\BlazorAPI.pdb
 C:\Users\Malha\Downloads\BlazorAPI-main\BlazorAPI-main\obj\Debug\net7.0\ref\BlazorAPI.dll
+C:\github\CSharp\BlazorAPI\obj\Debug\net7.0\scopedcss\Pages\EditPokemon.razor.rz.scp.css

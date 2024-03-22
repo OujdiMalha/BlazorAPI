@@ -3,9 +3,12 @@
 @using Util
 @inject PokeClient client
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManagerService
+
 
 
 <button class="pokemon-button" @onclick="GoToHomePage">Go to Home Page</button>
+<button class="pokemon-buttonn" @onclick="GoToFavoritePage">Go to Favorites</button>
 <div class="container">
     <div class="card">
         @if (pokemon != null && pokemon.types != null && pokemon.types.Count > 0)
@@ -77,5 +80,9 @@
     {
         // Redirige vers la page d'accueil en utilisant JavaScript
         await JSRuntime.InvokeVoidAsync("window.location.assign", "/");
+    }
+    void GoToFavoritePage()
+    {
+        NavigationManagerService.NavigateTo("/favoritepokemon");
     }
 }

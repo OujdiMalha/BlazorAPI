@@ -1,13 +1,16 @@
 ﻿@page "/"
-@using Models;
+@using Models
 @using Util
+@using System.Text.Json
 @inject PokeClient client
-@inject NavigationManager NavigationManager
+@inject NavigationManager NavigationManagerService
+@inject IJSRuntime JSRuntime
 
 <!-- Ajoutez la référence à la bibliothèque d'icônes -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <div class="body">
+    <button class="pokemon-button" @onclick="GoToFavoritePage">Go to Favorites</button>
     <div class="container">
         <img src="/img/BlazorAPI.png" alt="app title" class="app-title" />
         <div class="pokemon-row">
@@ -27,8 +30,8 @@
                         <div class="action-buttons">
                             <!-- Icône "Favorite" -->
                             <i class="fas fa-star" @onclick:preventDefault @onclick="() => ToggleFavorite(pokemon)" style="color: @(pokemon.IsFavorite ? "red" : "white")"></i>
-                        
-                        
+
+
                             <!-- Icône "Delete" -->
                             <i class="fas fa-trash-alt" @onclick:preventDefault @onclick="() => DeletePokemon(pokemon)"></i>
 
@@ -50,7 +53,6 @@
         for (int i = 1; i < 21; i++)
         {
             pokemonList.Add(await client.GetPokemon(i.ToString()));
-            StateHasChanged();
         }
     }
 
@@ -59,8 +61,32 @@
     {
         pokemon.IsFavorite = !pokemon.IsFavorite; // Bascule l'état du favori
 
-        // Appel asynchrone à votre backend pour sauvegarder l'état du favori
-        await client.ToggleFavoritePokemon(pokemon.id, pokemon.IsFavorite);
+        // Récupère les Pokémon favoris depuis le stockage local du navigateur
+        var favoritesJson = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "favorites");
+        var favoritePokemonIds = favoritesJson != null ? JsonSerializer.Deserialize<List<int>>(favoritesJson) : new List<int>();
+
+        if (pokemon.IsFavorite)
+        {
+            // Ajoute l'ID du Pokémon à la liste des favoris s'il n'est pas déjà présent
+            if (!favoritePokemonIds.Contains(pokemon.id))
+                favoritePokemonIds.Add(pokemon.id);
+        }
+        else
+        {
+            // Retire l'ID du Pokémon de la liste des favoris s'il est présent
+            favoritePokemonIds.Remove(pokemon.id);
+        }
+
+        // Convertit la liste d'IDs de favoris en format JSON et la sauvegarde dans le stockage local
+        await JSRuntime.InvokeVoidAsync("localStorage.setItem", "favorites", JsonSerializer.Serialize(favoritePokemonIds));
+
+        // Rafraîchit l'affichage
+        StateHasChanged();
+    }
+
+    void GoToFavoritePage()
+    {
+        NavigationManagerService.NavigateTo("/favoritepokemon");
     }
 
     // Fonction pour supprimer un Pokémon
@@ -84,6 +110,6 @@
         // Ensuite, vous pouvez naviguer vers une autre page pour la modification
         // Notez que vous devrez créer cette page de modification dans votre application
         // et transmettre l'ID du Pokémon à modifier comme paramètre
-        NavigationManager.NavigateTo($"/editpokemon/{pokemonId}");
+        NavigationManagerService.NavigateTo($"/editpokemon/{pokemonId}");
     }
-}
+} 
